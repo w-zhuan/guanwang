@@ -10,71 +10,128 @@
 <body>
   <div class="box">
     <div class="header">
-      <div class="main-content">
+      <div class="">
         <img src="image/logo.png" alt="logo">
         <button>主办方登录</button>
       </div>
     </div>
-    <div>
-      <div class="main-content">
-        <div>
+    <div >
+      <div class="main-content fist clearfix">
+        <div >
+           <h1>邻感</h1>
+           <p>会议现场社交工具<br>
+让商务会议社交效率提升至少20倍</p>
+          <div class="pic">
+            <img src="image/安卓.png" alt="安卓">
+            <img src="image/iOS.png" alt="ios">
+          </div>
+          <div class="pic-code">
+            <img src="image/安卓二维码.png" alt="安卓二维码">
+            <img src="image/iOS二维码.png" alt="ios二维码">
+          </div>
+        </div>
 
-        </div>
-        <img src="" alt="">
-      </div>
-    </div>
-    <div>
-      <div class="main-content">
         <div>
-          <h4>
-            一键发布你的名片和商务需求<br />
-一秒让全场的人知道</h4>
+            <img src="image/banner.png" alt="">
         </div>
-        <div>
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
+
       </div>
-    </div>
-    <div>
-      <div class="main-content">
-          <h4>
-            一眼发现现场可对接的资源<br />
-  一秒就能抢得先机</h4>
-        </div>
-        <div>
-          <img src="" alt="">
-          <img src="" alt="">
-        </div></h4>
-      </div>
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-      </div>
+        <div class="yellow"></div>
     </div>
     <div>
       <div class="main-content fours">
         <div class="circle">
 
         </div>
-        <h4>
-          一秒约上TA<br />
-一分钟直接开启现场商务面聊</h4>
+        <div class="conent yi">
+          <h4>
+            一键发布你的名片和商务需求<br />
+一秒让全场的人知道</h4>
+<span class="span">一秒轻松向现场人介绍自己，宣传产品、服务、创业项目，或发布你需要的资源；同时，只要扫一眼，就能找到现场你也感兴趣的TA
+</span>
+        </div>
+        <div class="dwon ">
+          <img src="image/1-左.png" alt="">
+          <img src="image/1-右.png" alt="">
+        </div>
       </div>
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
+    </div>
+    <div>
+      <div class="main-content">
+        <div class="conent">
+          <h4>
+            一眼发现现场可对接的资源<br />
+           一秒就能抢得先机</h4>
+           <span class="span">只要扫一眼按一键，就能连接现场可以对接的资源机会，1秒抢下你急需的资源
+</span>
+        </div>
+
+        <div class="dwon ">
+          <img src="image/2-左.png" alt="">
+          <img src="image/2-右.png" alt="">
+        </div>
       </div>
 
+    </div>
+    <div>
+      <div class="main-content fours">
+        <div class="circle">
+
+        </div>
+        <div class="conent">
+          <h4>
+            一秒约上TA<br />
+  一分钟直接开启现场商务面聊</h4>
+        <span class="span">不论是主讲人、嘉宾、还是参会者，只要他也想跟你聊聊，一秒就能打通聊天通道，一分钟直接现场约面聊，敲出最快最有价值的商机</span>
+        </div>
+        <div class="dwon ">
+          <img src="image/3-左.png" alt="">
+          <img src="image/3-右.png" alt="">
+        </div>
       </div>
     </div>
     <div class="footer">
 
     </div>
   </div>
-  <script type="text/javascript" src="js/index.js">
+  <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      $(".pic img").click(function () {
+          var index = $(this).index()
+          if(index==0){
+              window.location.href = "http://sj.qq.com/myapp/detail.htm?apkName=com.caca.main"
+          }else{
+              window.location.href = "https://itunes.apple.com/cn/app/%E9%82%BB%E6%84%9F/id1154440013?mt=8"
+          }
 
-  </script>
+         console.log(index)
+
+      })
+      $(".pic img").hover(function () {
+          var index = $(this).index()
+          console.log(index)
+          $(".pic-code img").eq(index).addClass("none")
+      },function(){
+          var index = $(this).index()
+          console.log(index)
+          $(".pic-code img").eq(index).removeClass("none")
+      })
+
+
+      document.body.onmousewheel = function(event) {
+          event = event || window.event;
+          console.dir(event)
+          setInterval(function(){
+              if(document.body.scrollTop>=732){
+                  $(".header").css({"position":"fixed","background-color":"#eee"});
+                  $(".header button").css({"background-color":"#FFCD00"});
+              } else if(document.body.scrollTop<=732){
+                  $(".header").css({"position":"absolute","background-color":""});
+                  $(".header button").css({"background-color":"#fff"});
+              }
+          },1000)
+      };
+
+    </script>
 </body>
 </html>

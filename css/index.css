@@ -3,41 +3,77 @@
   padding: 0;
   list-style:none;
 }
-
+.clearfix:after {
+content: "\0020";
+display: block;
+height: 0;
+clear: both;
+}
+.clearfix {
+zoom: 1;
+}
 .box{
   background-color: #fff;
 
 }
-box>div{
+.box>div {
   width: 100%;
 
 }
 .box>div:nth-of-type(4){
   background-color: #F3F5F9;
 }
+.box>div:nth-of-type(2){
+  position: relative;
+  background: url(../image/banner1.png) 85% 100%  no-repeat;
+
+}
+.yellow{
+  width:400px;
+  height:732px;
+  background-color: #FFD62E;
+position: absolute;
+  top:0;
+  right:0;
+  z-index: 1;
+}
 .main-content{
    width: 1366px;
    margin: 0 auto;
-
    height: 732px;
 
 }
-h4{
+
+p,h4{
   text-align: center;
   font-size: 28px;
-  color: #001111
+  color: #001111;
 }
-
+.yi{
+   margin-top: 118px;
+}
+ h1{
+   font-size: 75px;
+   color: #111;
+   font-family: MicrosoftYaHei;
+ }
 /*header*/
 
 .header{
-   background-color: #eee;
+   /*background-color: #eee;*/
    height: 94px;
+   position: absolute;
+  z-index: 33;
+}
+.header div{
+  width: 1366px;
+  margin: 0 auto;
 }
 .header img{
-  width: 120px;height: 60px;
+  width: 120px;
+  height: 60px;
 
-  float: left;
+
   margin-top: 17px;
 }
 .header button{
@@ -56,21 +92,94 @@ h4{
   color: #333;
   margin-top: 17px;
 }
-.fours{
+.fist{
   position: relative;
+  z-index: 2;
+}
+.fist>div:nth-of-type(1){
+  float: left;
+  margin-top:266px;
+}
+.fist div:nth-of-type(1) p{
+  text-align: left;
+}
+.fist>div:nth-of-type(2){
+  float: right;
+}
+.fist>div>img{
+  margin-top: 161px;
+}
+.pic>img{
+   margin-top: 60px;
+  z-index: 11;
+}
+.pic-code {
+  position: relative;
+}
+.pic-code>img {
+    margin-top: 22px;
+    position: absolute;
+  display: none;
+}
+.pic-code>img:nth-of-type(1){
+  top:0;
+  left:0;
+}
+.pic-code>img:nth-of-type(2){
+  top:0;
+  left:188px;
+}
+.none{display: block !important;}
+.fist>div>div>img:nth-of-type(2){
+  margin-left: 30px;
+}
 
+.conent {
+  padding-top: 58px;
+  position: relative;
+  z-index: 11;
 
 }
-.circle{
-  width: 250px;
-  height: 250px;
-  border: 15px solid #F3F5F9;
-  border-radius:100%;
+.conent  .span{
+   margin:32px auto;
 
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: #343F45;
+
+}
+
+
+.dwon {
+   position: relative;
+}
+.dwon img{
+  margin-top: 70px;
   position: absolute;
+  z-index: 1;
+}
+.dwon img:nth-of-type(1){
+  left:80px;
 
+}
+.dwon img:nth-of-type(2){
+  right:80px;
+}
+.fours{
+  position: relative;
+}
+
+.circle{
+  width: 235px;
+  height: 235px;
+  border:15px solid #F3F5F9;
+  border-radius:100%;
+  float: none;
+  position: absolute;
   top: 60px;
-  left: 117px;
+  left: 257px;
+  z-index: 1;
 }
 
 /*footer*/
