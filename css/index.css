@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   list-style:none;
+  
 }
 .clearfix:after {
 content: "\0020";
@@ -25,11 +26,18 @@ zoom: 1;
 }
 .box>div:nth-of-type(2){
   position: relative;
-  background: url(../image/banner1.png) 85% 100%  no-repeat;
-
+}
+.linear{
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#b8c4cb,endColorStr=red); /*IE 6 7 8*/
+background: -ms-linear-gradient(top, #fff,  #0000ff);        /* IE 10 */
+background:-moz-linear-gradient(top,#b8c4cb,#f6f6f8);/*火狐*/
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#f6f6f8));/*谷歌*/
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#0000ff));      /* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(left, #FFCD00, #FFE742);   /*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(left, #FFCD00, #FFE742);  /*Opera 11.10+*/
 }
 .yellow{
-  width:400px;
+  width:60%;
   height:732px;
   background-color: #FFD62E;
 position: absolute;
@@ -48,6 +56,33 @@ p,h4{
   text-align: center;
   font-size: 28px;
   color: #001111;
+  position: relative;
+}
+p{
+  color: #343F45 ;
+}
+p>a,h4>a{
+  background-color: #FFCD00;
+  height: 15px;
+  position:absolute;
+ right: 0;
+ bottom: 0;
+  width: 123px;
+  z-index: -1;
+}
+.dao{
+    width: 171px;
+    right: 555px;
+}
+.ji{
+  width: 115px;
+  right: 569px;
+
+}
+.liao{
+  width: 225px;
+  right: 500px;
+
 }
 .yi{
    margin-top: 118px;
@@ -58,6 +93,13 @@ p,h4{
    font-family: MicrosoftYaHei;
  }
 /*header*/
+.box .go{
+  position: fixed;
+  top: 227px;
+  right: 300px;
+  z-index: 44;
+  display: none;
+}
 
 .header{
    /*background-color: #eee;*/
@@ -65,7 +107,7 @@ p,h4{
    position: absolute;
   z-index: 33;
 }
-.header div{
+.header div,.footer>div{
   width: 1366px;
   margin: 0 auto;
 }
@@ -90,11 +132,20 @@ p,h4{
   font-family:MicrosoftYaHei;
   font-size: 18px;
   color: #333;
-  margin-top: 17px;
+  margin-top: 17px;   
 }
+
+/*新增*/
+button:hover{ 
+   box-shadow:0px 8px 35px 2px #fdbb09;
+    cursor:pointer;
+}
+
+
 .fist{
   position: relative;
   z-index: 2;
+  background:#fff url(../image/banner1.png) 110% 100%  no-repeat;
 }
 .fist>div:nth-of-type(1){
   float: left;
@@ -106,20 +157,58 @@ p,h4{
 .fist>div:nth-of-type(2){
   float: right;
 }
-.fist>div>img{
-  margin-top: 161px;
+
+/*修改*/
+.fist>div .banner{
+  margin-top: 70px;
+    width:619px;
+    height:651px;
+  
 }
-.pic>img{
+.fist .small{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+.pic>div{
+  float: left;
    margin-top: 60px;
-  z-index: 11;
+   width: 170px;
+   height: 50px;
+   background: url(../image/anniu.png) 100% 100% no-repeat;
+   z-index: 11;
+   cursor:pointer;
+}
+.pic>div:nth-of-type(2){
+  margin-left: 30px;
+}
+.pic>div img{
+  margin-left: 20px;
+  margin-top: 9px;
+  margin-right: 19px;
+  width: 27px;
+  height: 32px;
+
+  float: left;
+
+}
+.pic>div span{
+  font-size: 12px !important;
+  color: #fff;
+   
+}
+.pic>div span:nth-of-type(2){
+  font-size: 18px !important;
+
 }
 .pic-code {
   position: relative;
 }
 .pic-code>img {
-    margin-top: 22px;
+    margin-top: 3px;
     position: absolute;
-  display: none;
+    display: none;
+
 }
 .pic-code>img:nth-of-type(1){
   top:0;
@@ -127,7 +216,7 @@ p,h4{
 }
 .pic-code>img:nth-of-type(2){
   top:0;
-  left:188px;
+  left:180px;
 }
 .none{display: block !important;}
 .fist>div>div>img:nth-of-type(2){
@@ -155,25 +244,27 @@ p,h4{
    position: relative;
 }
 .dwon img{
-  margin-top: 70px;
+  margin-top: 40px;
   position: absolute;
   z-index: 1;
 }
 .dwon img:nth-of-type(1){
-  left:80px;
+  left:174px;
 
 }
 .dwon img:nth-of-type(2){
-  right:80px;
+
+  right:176px;
 }
 .fours{
   position: relative;
 }
 
+
 .circle{
   width: 235px;
   height: 235px;
-  border:15px solid #F3F5F9;
+  border: 15px solid #F3F5F9;
   border-radius:100%;
   float: none;
   position: absolute;
@@ -187,6 +278,39 @@ p,h4{
   background-color: #000;
   width: 100%;
   height: 75px;
-  border-top-left-radius:145px;
-  border-top-right-radius:145px;
+  line-height: 75px;
+  border-top-left-radius:160px;
+  border-top-right-radius:160px;
+  color:#8A8A8A;
+}
+.footer div span{
+  float: left;
+  margin-left: 40px;
+    font-size: 12px;
+}
+
+/*修改*/
+.footer div span:nth-of-type(3){
+  float: right;
+}
+
+@media (max-width: 1200px) {
+  .yellow{
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px)  {
+  .yellow{
+    display: none;
+  }
+}
+@media (min-width: 1366px) and (max-width: 1680px)  {
+  .yellow{
+    width: 40%;
+  }
+}
+@media (min-width: 1680px) and (max-width:3000px )  {
+  .yellow{
+    width: 40%;
+  }
 }
